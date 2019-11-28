@@ -10,9 +10,24 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    
+    @IBOutlet var nameLabel: UILabel!
+    @IBOutlet var secondName: UILabel!
+    @IBOutlet var ageLabel: UILabel!
+    
+    var viewModel: ViewModel!{
+        didSet {
+            self.nameLabel.text = viewModel.name
+            self.secondName.text = viewModel.secondName
+            self.ageLabel.text = viewModel.age
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        viewModel = ViewModel()
+    
     }
 
 
