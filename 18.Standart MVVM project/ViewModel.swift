@@ -10,7 +10,7 @@ import Foundation
 
 class ViewModel {
     
-    private var profile = Profile(name: "Jhon", secondName: "Lebovsky", age: 32)
+    private var profile = Profile(name: "John", secondName: "Lebovsky", age: 32)
     
     var name: String {
         return profile.name
